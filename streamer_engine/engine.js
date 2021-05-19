@@ -67,8 +67,8 @@ class Streamer
 
     getVideoToStream(){
         if (this.availableVids.length){
-            let vts = this.availableVids[1]
-            logger.debug(`Playing ${vts}`)
+            let vts = this.availableVids[4]
+            console.log(this.availableVids)
             return vts;
         }
         else{

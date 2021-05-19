@@ -1,6 +1,7 @@
 :root {
     --body-clr: rgb(26, 25, 25);
     --edges: rgb(112, 250, 32);
+    --secondary: rgb(110, 160, 82);
     --dev-border: 1px dashed; /* Set this to 1 or 2 for wireframe.(For dev)*/
   }
 
@@ -102,12 +103,15 @@ video {
     height: fit-content;
     padding: 10px;
     margin-bottom: 10px;
+    border-left: 5px solid var(--edges);
     border-bottom: 1px solid var(--edges);
     position: relative;
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
     display: flex;
     flex-direction: row;
+    transition-duration: 500ms;
+    cursor: pointer;
 
 }
 
@@ -118,7 +122,6 @@ video {
     /* border: 1px solid var(--edges); */
     left: 5px;
     top: 5px;
-    cursor: pointer;
     border-radius: 5px;
 }
 .text-holder{
@@ -128,14 +131,27 @@ video {
     /* border: 1px solid var(--edges); */
     right: -10px;
     padding-left: 10px;
-    cursor: pointer;
+    transition-duration: 500ms;
+
 }
 .title{
     color: whitesmoke;
     font-weight: 600;
     font-size: medium;
     font-family: 'Inter', sans-serif;
+    transition-duration: 500ms;
 }
+.playlist-items:hover{
+    background-color: var(--secondary);
+    transform: translateY(-10%);
+    box-shadow: 0px 0px 20px 0px var(--secondary);
+    transition-duration: 400ms;
+}
+.playlist-items:active{
+    transform: translateY(10%);
+    transition-duration: 200ms;
+}
+
 .description{
     color: whitesmoke;
     font-size: small;
