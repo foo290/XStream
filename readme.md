@@ -1,4 +1,4 @@
-# XStream
+<h1 align="center">XStream</h1>
 A very simple video streaming server in node
 
 ### Home page:
